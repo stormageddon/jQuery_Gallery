@@ -1,33 +1,34 @@
 //imageSwitcher.js
 
+//window.onload{function(){
 $(document).ready(function(){
-	var index=1;
+	var index=0;
+	var imagesArray = {};
+	var incrementSize = 1;
+	
+	window.setImageArray = function(images) {
+		imagesArray = images;
+	};
+	
 	$('#goNext').on('click', function() {
-		//index += 1;
-		//if (index > 4)
-		//{
-		//	index=1;
-		//}
-		//var imagePath = "images/puppy"+index+".jpg";
-		//$('#imageContainer img').attr('src', imagePath);
-		changeImage(1);
+		changeImage(incrementSize);
 	});
 	
 	$('#goPrevious').on('click', function() {
-		changeImage(-1);
+		changeImage(incrementSize * (-1));
 	});
 	
 	function changeImage(increment) {
 		index += increment;
-		if (index > 4)
+		if (index >= imagesArray.length)
 		{
-			index=1;
+			index=0;
 		}
-		else if (index < 1)
+		else if (index < 0)
 		{
-			index=4;
+			index=imagesArray.length - 1;
 		}
-		var imagePath = "images/puppy" + index + ".jpg";
+		var imagePath = "images/" + imagesArray[index];
 		$('#picDisplay').attr('src', imagePath);
 	};
 });
