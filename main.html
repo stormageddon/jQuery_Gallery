@@ -1,34 +1,18 @@
 <html>
 <head>
 	<title>jQuery Sliding Gallery Test</title>
-
+	
+	<script src="jquery-2.0.2.min.js"></script>
+	<script src="scripts/imageSwitcher.js" type="text/javascript"></script>
 
 </head>
 <body>
-<script src="jquery-2.0.2.min.js"></script>
-	<script>
-		window.onload = function() {
-			$('#headerTest').css("color", "green");
-			var imagesPath = "images/";
-			alert();
-		}
-	</script>
-		<script>
-		$(document).ready(function(){
-			var index=1;
-			$('#goNext').on('click', function() {
-				index += 1;
-				if (index > 4)
-				{
-					index=1;
-				}
-				var imagePath = "images/puppy"+index+".jpg";
-				$('#imageContainer img').attr('src', imagePath);
-			});
-		});
-	</script>
 	<h2 id="headerTest" style="color:blue;">This is a test</h2>
-	<div id="imageContainer"><img src="images/puppy1.jpg" width="300px" height="250px" />
-	<div id="goNext">Next</div>
+	<div id="imageContainer">
+		<span>
+			<div id="goPrevious" style="display: inline-block"><img src="images/previous_button_green.png" width="50px" height="50px"/></div>
+			<img id ="picDisplay" src="images/puppy1.jpg" width="300px" height="250px" style="display: inline-block"/>
+			<div id="goNext" style="display: inline-block"><img src="images/next_button_green.png" width="50px" height="50px"/></div>
+		</span>
 </body>
 </html>
