@@ -29,10 +29,10 @@ Then, in the header of the page you would like to place the gallery in, make sur
   the images on you website, include the following div block:
   
     <div id="imageContainer">
-	<img id ="picDisplay" width="300px" height="250px" style="display: inline-block;"/><br>
-	<div id="goPrevious" style="display: inline-block"><img src="images/previous_button_green.png" width="50px" height="50px"/></div>
-	<div id="imageCaption" style="display: inline-block"></div>
-	<div id="goNext" style="display: inline-block"><img src="images/next_button_green.png" width="50px" height="50px"/></div>
+        <img id ="picDisplay" width="300px" height="250px" style="display: inline-block;"/><br>
+        <div id="goPrevious" style="display: inline-block"><img src="images/previous_button_green.png" width="50px" height="50px"/></div>
+        <div id="imageCaption" style="display: inline-block"></div>
+        <div id="goNext" style="display: inline-block"><img src="images/next_button_green.png" width="50px" height="50px"/></div>
     </div>
     
   jQuery_Gallery will update the imageContainer div by default with the various pictures supplied in the jQuery initialization you provided. Once these two
