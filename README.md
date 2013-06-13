@@ -1,6 +1,9 @@
-jQuery_Gallery v0.1
-Author: M. Caputo
+jQuery_Gallery 
 ==============
+v0.1
+Author: M. Caputo
+
+
 
 jQuery_Gallery offers a simple solution to creating an image gallery on your website. With just a few lines,
 jQuery_Gallery can be up and running, displaying any number of pictures in a simple ui.
@@ -11,13 +14,13 @@ How to use jQuery_Gallery
 jQuery_Gallery is very simple to use. Simply download the library and place it in the /scripts folder of your website.
 Then, in the header of the page you would like to place the gallery in, make sure to include this code:
 
-  jQuery(function($){
-		$.initImageSwitcher(opts = {
-			images : [  {path: "path/to/image.jpg", title: "Mouse hover title for image", caption: "A dexcription of the picture you want displayed"},
-				{path: "path/to/second/image.jpg", title: "Picture 2 title", caption: "Picture 2 caption"}
-			]
-		});
-	});
+    jQuery(function($){
+        $.initImageSwitcher(opts = {
+            images : [  {path: "path/to/image.jpg", title: "Mouse hover title for image", caption: "A dexcription of the picture you want displayed"},
+                {path: "path/to/second/image.jpg", title: "Picture 2 title", caption: "Picture 2 caption"}
+            ]
+        });
+    });
   
   Any number of images can be included in the images array passed to the anonymous  function. jQuery_Gallery will automatically load the pictures, attaching
   the title and caption descriptions to them as well.
