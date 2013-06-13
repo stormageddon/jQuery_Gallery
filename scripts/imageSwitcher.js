@@ -1,13 +1,16 @@
-//imageSwitcher.js
+//imageSwitcher.js v0.1
+// A simple jQuery image gallery that allows a user to easily create a gallery of photographs.
+//
+// @author: M. Caputo
 
-//window.onload{function(){
 $(document).ready(function(){
+	var imagesArray = null;
 	var index=0;
-	var imagesArray = {};
 	var incrementSize = 1;
 	
-	window.setImageArray = function(images) {
-		imagesArray = images;
+	$.initImageSwitcher = function(opts) {
+		imagesArray = opts.images;
+		changeImage(0);
 	};
 	
 	$('#goNext').on('click', function() {
@@ -28,7 +31,9 @@ $(document).ready(function(){
 		{
 			index=imagesArray.length - 1;
 		}
-		var imagePath = "images/" + imagesArray[index];
+		var imagePath = "images/" + imagesArray[index].path;
 		$('#picDisplay').attr('src', imagePath);
+		$('#picDisplay').attr('title', imagesArray[index].title);
+		$('#imageCaption').text(imagesArray[index].caption);
 	};
 });
